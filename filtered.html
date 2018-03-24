@@ -45,14 +45,54 @@
       $(".spec-1, .spec-2, .spec-3").hide();
 
       $(".dropdown-item").click(function(){
+          $(".spec-1, .spec-2, .spec-3").hide();
+
           var selectspec = $(this).text();
           $("#dropdown-btn").html(selectspec);
-          $("")
+
+          var selectspec_show;
+
+          $("#compare-col").children().each(function(){
+              if($(this).text() == selectspec) {
+                selectspec_show = "." + $(this).attr('class');
+              }
+          });
+
+          $(selectspec_show).show();
+          });
       });
 
+      $("#compare-btn").click(function(){
+          $(".selected").each(function(){
 
-  });
+              var tr = $("<tr/>");
+              var th = $("<th/>");
+              var td = $("<td/>");
 
+              th.addClass("spec-0");
+              th.attr("scope","row");
+              var laptop_name = $(this).children....;
+              th.text(laptop_name);
+              th.appendTo(tr);
+
+              td.addClass("spec-1");
+              var attr_val = $(this).children....;
+              td.text(attr_val);
+              td.appendTo(tr);
+
+              td.addClass("spec-2");
+              var attr_val = $(this).children....;
+              td.text(attr_val);
+              td.appendTo(tr);
+
+              td.addClass("spec-3");
+              var attr_val = $(this).children....;
+              td.text(attr_val);
+              td.appendTo(tr);
+
+              tr.appendTo("#compare-table");
+          });
+      });
 
   </script>
 
@@ -113,7 +153,7 @@
 <!-- Seleted Laptops -->
 <div class="footer">
     <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">
+      <button type="button" class="btn btn-primary btn-block" id="compare-btn" data-toggle="modal" data-target="#exampleModal">
         Compare
       </button>
 </div>
@@ -125,13 +165,13 @@
       <div class="modal-header">
     <!-- Example single danger button -->
         <div class="btn-group">
-          <button type="button" class="btn btn-danger dropdown-toggle" id="dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-danger dropdown-toggle btn-lg " id="dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Specification
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item drop-0" href="#">Price</a>
-            <a class="dropdown-item drop-1" href="#">Brand</a>
-            <a class="dropdown-item drop-2" href="#">Rating</a>
+            <a class="dropdown-item drop-1" href="#">Price</a>
+            <a class="dropdown-item drop-2" href="#">Brand</a>
+            <a class="dropdown-item drop-3" href="#">Rating</a>
           </div>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -142,32 +182,15 @@
 
         <table class="table table-striped table-hover">
           <thead>
-            <tr>
+            <tr id="compare-col">
               <th scope="col" class="spec-0"></th>
               <th scope="col" class="spec-1">Price</th>
               <th scope="col" class="spec-2">Brand</th>
               <th scope="col" class="spec-3">Rating</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row" class="spec-0">1</th>
-              <td class="spec-1">Mark</td>
-              <td class="spec-2">Otto</td>
-              <td class="spec-3">@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row" class="spec-0">2</th>
-              <td class="spec-1">Jacob</td>
-              <td class="spec-2">Thornton</td>
-              <td class="spec-3">@fat</td>
-            </tr>
-            <tr>
-              <th scope="row" class="spec-0">3</th>
-              <td class="spec-1">Larry</td>
-              <td class="spec-2">the Bird</td>
-              <td class="spec-3">@twitter</td>
-            </tr>
+          <tbody id="compare-table">
+
           </tbody>
         </table>
       </div>
