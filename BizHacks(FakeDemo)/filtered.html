@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<title>Best Buy Canada</title>
+
+  <style>
+    /* header bottom margin */
+     .jumbotron {
+      background-color: #003b64;
+    }
+  </style>
+
+  <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #000080;
+        color: white;
+
+    }
+
+    .seleted {
+      box-shadow: 0 0 50px #000080;
+    }
+
+    .panel-heading {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .panel-footer {
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .on-sale {
+      color: #da1a36;
+    }
+
+    .modal {
+      top:50%;
+    }
+
+    th, td, .dropdown-item  {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+      $(".panel.panel-primary").click(function(){
+          $(this).toggleClass("seleted");
+      });
+
+      $(".spec-2, .spec-3").hide();
+
+      $(".dropdown-item").click(function(){
+          $(".spec-1, .spec-2, .spec-3").hide();
+
+          var selectspec = $(this).text();
+          $("#dropdown-btn").text(selectspec);
+
+          var selectspec_show;
+
+          $("#compare-col").children().each(function(){
+              if($(this).text() == selectspec) {
+                selectspec_show = "." + $(this).attr('class');
+              }
+          });
+
+          $(selectspec_show).show();
+          });
+      });
+
+  </script>
+
+</head>
+<body>
+
+<div class="jumbotron mb-4">
+  <div class="container">
+    <img src="https://images.bbycastatic.ca/sf/images/common/main-logo.svg" width="60" alt="Best Buy Logo">    
+  </div>
+</div>
+
+
+<div class="container">   
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">BEST IN GAMING</div>
+          <div class="panel-body"><img src="https://www.thegoodguys.com.au/wcsstore/TGGCAS/idcplg?IdcService=GET_FILE&RevisionSelectionMethod=LatestReleased&noSaveAs=1&dDocName=50048706_512055&Rendition=ZOOMIMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Laptop 1 - $1,399</div>
+        </div>
+      </div>
+      <div class="col-xs-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">BEST SELLING</div>
+          <div class="panel-body"><img src="https://www.thegoodguys.com.au/wcsstore/TGGCAS/idcplg?IdcService=GET_FILE&RevisionSelectionMethod=LatestReleased&noSaveAs=1&dDocName=50048706_512055&Rendition=ZOOMIMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer on-sale">Laptop 2 - $1,199</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <hr style="border: 0; height: 0; border-top: 1px solid rgba(0,0,0,0,1); border-bottom: 1px solid rgba(255,255,255,0.3);">
+      <div class="divider">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-body"><img src="https://www.thegoodguys.com.au/wcsstore/TGGCAS/idcplg?IdcService=GET_FILE&RevisionSelectionMethod=LatestReleased&noSaveAs=1&dDocName=50048706_512055&Rendition=ZOOMIMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer on-sale">Laptop 3 - $1,599</div>
+        </div>
+      </div>
+      <div class="col-xs-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-body"><img src="https://www.thegoodguys.com.au/wcsstore/TGGCAS/idcplg?IdcService=GET_FILE&RevisionSelectionMethod=LatestReleased&noSaveAs=1&dDocName=50048706_512055&Rendition=ZOOMIMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Laptop 4 - $1,329</div>
+        </div>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-xs-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-body"><img src="https://www.thegoodguys.com.au/wcsstore/TGGCAS/idcplg?IdcService=GET_FILE&RevisionSelectionMethod=LatestReleased&noSaveAs=1&dDocName=50048706_512055&Rendition=ZOOMIMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Laptop 5 - $1,399</div>
+        </div>
+      </div>
+      <div class="col-xs-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-body"><img src="https://www.thegoodguys.com.au/wcsstore/TGGCAS/idcplg?IdcService=GET_FILE&RevisionSelectionMethod=LatestReleased&noSaveAs=1&dDocName=50048706_512055&Rendition=ZOOMIMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Laptop 6 - $1,699</div>
+        </div>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-xs-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-body"><img src="https://www.thegoodguys.com.au/wcsstore/TGGCAS/idcplg?IdcService=GET_FILE&RevisionSelectionMethod=LatestReleased&noSaveAs=1&dDocName=50048706_512055&Rendition=ZOOMIMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer on-sale">Laptop 7 - $1,999</div>
+        </div>
+      </div>
+      <div class="col-xs-6"> 
+        <div class="panel panel-primary">
+          <div class="panel-body"><img src="https://www.thegoodguys.com.au/wcsstore/TGGCAS/idcplg?IdcService=GET_FILE&RevisionSelectionMethod=LatestReleased&noSaveAs=1&dDocName=50048706_512055&Rendition=ZOOMIMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Laptop 8 - $1,599</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+
+
+
+<!-- Seleted Laptops -->
+<div class="footer">
+    <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg btn-block" id="compare-btn" data-toggle="modal" data-target="#exampleModal">
+        Compare
+      </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+    <!-- Example single danger button -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle btn-lg" id="dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span style="font-size: 15px">Specification</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item drop-1" href="#">Price</a>
+            <a class="dropdown-item drop-2" href="#">Brand</a>
+            <a class="dropdown-item drop-3" href="#">Rating</a>
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr id="compare-col">
+              <th scope="col" class="spec-0"></th>
+              <th scope="col" class="spec-1"><u>Price</u></th>
+              <th scope="col" class="spec-2"><u>Brand</u></th>
+              <th scope="col" class="spec-3"><u>Rating</u></th>
+            </tr>
+          </thead>
+          <tbody id="compare-table">
+            <tr>
+              <th class="spec-0">Laptop 2</th>
+              <td class="spec-1 on-sale">$1,199</td>
+              <td class="spec-2">Lenovo</td>
+              <td class="spec-3">4.5 (122 reviews)</td>
+            </tr>
+            <tr>
+              <th class="spec-0">Laptop 3</th>
+              <td class="spec-1 on-sale">$1,599</td>
+              <td class="spec-2">Asus</td>
+              <td class="spec-3">4.1 (12 reviews)</td>
+            </tr>
+            <tr>
+              <th class="spec-0">Laptop 5</th>
+              <td class="spec-1">$1,399</td>
+              <td class="spec-2">HP</td>
+              <td class="spec-3">3.2 (33 reviews)</td>
+            </tr>
+            <tr>
+              <th class="spec-0">Laptop 7</th>
+              <td class="spec-1 on-sale">$1,999</td>
+              <td class="spec-2">Dell</td>
+              <td class="spec-3">3.5 (48 reviews)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+  </body>
+</html> 
