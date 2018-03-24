@@ -42,6 +42,15 @@
           $(this).toggleClass("seleted");
       });
 
+      $(".spec-1, .spec-2, .spec-3").hide();
+
+      $(".dropdown-item").click(function(){
+          var selectspec = $(this).text();
+          $("#dropdown-btn").html(selectspec);
+          $("")
+      });
+
+
   });
 
 
@@ -116,13 +125,13 @@
       <div class="modal-header">
     <!-- Example single danger button -->
         <div class="btn-group">
-          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Action
+          <button type="button" class="btn btn-danger dropdown-toggle" id="dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Specification
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Spec Comparison</a>
-            <a class="dropdown-item" href="#">Price</a>
-            <a class="dropdown-item" href="#">Brand</a>
+            <a class="dropdown-item drop-0" href="#">Price</a>
+            <a class="dropdown-item drop-1" href="#">Brand</a>
+            <a class="dropdown-item drop-2" href="#">Rating</a>
           </div>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
